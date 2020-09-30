@@ -56,4 +56,4 @@ The only folder in 'AndroidApp' is 'LookUpMobile', our android application. This
 The foot-mounted sensor is based on Arduino UNO R3, equipped with MPU9150 and HC-05 Bluetooth. The only file 'MPU9150.ino' is the Arduino code. 
 
 - It collects data of accelerometer, gyroscope, and magnetometer in MPU9150 and sends it via Bluetooth every 17ms(70Hz). 
-- ![Wiring diagram](./Arduino/图片 1.png)
+- ![Wiring diagram](./Arduino/Arduino.png)
