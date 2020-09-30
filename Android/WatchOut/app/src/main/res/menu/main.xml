@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_SaveLog"
+        android:orderInCategory="101"
+        android:title="@string/SaveLogcat"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_RecordGT"
+        android:orderInCategory="111"
+        android:title="@string/Rec_WhenStart"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_RampTrain"
+        android:orderInCategory="110"
+        android:title="@string/RampTrain"
+        app:showAsAction="never" />
+</menu>

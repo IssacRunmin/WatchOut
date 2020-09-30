@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lookup</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="button_showsensordata">Show Sensor Data</string>
+    <string name="text_acc">Accelerometer:</string>
+    <string name="text_mag">MagneticField:</string>
+    <string name="text_gyr">Gyroscope:</string>
+    <string name="text_ori">Orientation:</string>
+    <string name="text_samplingrate">Sampling Rate:</string>
+    <string name="hint_seconds">Input Seconds</string>
+    <string-array name="Testers">
+        <item>Xu J.C.</item>
+        <item>Zhang T.G.</item>
+        <item>Ou R.M.</item>
+        <item>Li J.W.</item>
+        <item>Chen Y.J</item>
+        <item>Else (Input his/her name below)</item>
+    </string-array>
+    <string name="hint_tester">Input Tester</string>
+    <integer name="TesterNumber">5</integer>
+</resources>

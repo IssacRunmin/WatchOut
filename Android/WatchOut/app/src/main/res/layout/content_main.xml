@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity">
+    <!--tools:showIn="@layout/app_bar_main">-->
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/QALayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/Rec_Start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="Record"
+            android:text="@string/Rec_Start"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Rec_End"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="Record"
+            android:text="@string/Rec_End"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Rec_UpCurb"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="RecordEvent"
+            android:text="@string/Rec_UpCurb"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/Rec_End"
+            app:layout_constraintStart_toEndOf="@+id/Rec_Start"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Rec_UpRamp"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="RecordEvent"
+            android:text="@string/Rec_UpRamp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/Rec_End"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintStart_toEndOf="@+id/Rec_Start"
+            app:layout_constraintTop_toBottomOf="@+id/Rec_UpCurb" />
+
+        <Button
+            android:id="@+id/Rec_LTurn"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="RecordEvent"
+            android:text="@string/Rec_LTurn"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Rec_UpRamp" />
+
+        <Button
+            android:id="@+id/Rec_Flat"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="RecordEvent"
+            android:text="@string/Rec_Flat"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/Rec_End"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintStart_toEndOf="@+id/Rec_Start"
+            app:layout_constraintTop_toBottomOf="@+id/Rec_UpRamp" />
+
+        <Button
+            android:id="@+id/Rec_RTurn"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="RecordEvent"
+            android:text="@string/Rec_RTurn"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Rec_UpRamp" />
+
+        <Button
+            android:id="@+id/Rec_DownRamp"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="RecordEvent"
+            android:text="@string/Rec_DownRamp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/Rec_End"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintStart_toEndOf="@+id/Rec_Start"
+            app:layout_constraintTop_toBottomOf="@+id/Rec_Flat" />
+
+        <Button
+            android:id="@+id/Rec_DownCurb"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="RecordEvent"
+            android:text="@string/Rec_DownCurb"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/Rec_End"
+            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintStart_toEndOf="@+id/Rec_Start"
+            app:layout_constraintTop_toBottomOf="@+id/Rec_DownRamp" />
+
+        <Button
+            android:id="@+id/Rec_Special"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="RecordEvent"
+            android:text="@string/Rec_Special"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Rec_DownRamp" />
+
+        <Button
+            android:id="@+id/Rec_Stand"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:onClick="RecordEvent"
+            android:text="@string/Rec_Stand"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Rec_DownRamp" />
+
+        <TextView
+            android:id="@+id/Rec_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/Rec_Flat"
+            android:textSize="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/Rec_LTurn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Rec_Start" />
+
+        <TextView
+            android:id="@+id/Rec_State"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="64dp"
+            android:background="#c5c5c5"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/LogcatLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView_Logcat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="64dp"
+            android:background="#ed000000"
+            android:scrollbars="vertical"
+            android:textColor="#deffffff" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/MainLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/StateLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="72dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/EditText_tester"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView_StepCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="812"
+                android:textColor="#ffffff"
+                android:textSize="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/load_stepcount"
+                app:layout_constraintEnd_toEndOf="@+id/load_stepcount"
+                app:layout_constraintStart_toStartOf="@+id/load_stepcount"
+                app:layout_constraintTop_toTopOf="@+id/load_stepcount"
+                app:layout_constraintVertical_bias="0.49" />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/load_stepcount"
+                style="@style/AVLoadingIndicatorView.Large"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="visible"
+                app:indicatorName="BallScaleIndicator"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_Brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/Brand"
+                android:textColor="#ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/load_stepcount" />
+
+            <TextView
+                android:id="@+id/textview_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="8dp"
+                android:text="Connect To BT"
+                android:textColor="#ffffff"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_Brand" />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/load_state"
+                style="@style/AVLoadingIndicatorView.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textview_state" />
+        </android.support.constraint.ConstraintLayout>
+
+        <Spinner
+            android:id="@+id/ModeSelect"
+            android:layout_width="91dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:drawable/spinner_background"
+            android:entries="@array/samplingRates"
+            android:popupBackground="@android:drawable/spinner_dropdown_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/StateLayout" />
+
+        <Spinner
+            android:id="@+id/TesterSpinner"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:drawable/spinner_background"
+            android:entries="@array/Testers"
+            android:popupBackground="@android:drawable/spinner_dropdown_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/StateLayout" />
+
+        <EditText
+            android:id="@+id/EditText_tester"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:hint="@string/hint_tester"
+            android:inputType="textPersonName"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TesterSpinner" />
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/BTCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Bluetooth   "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EditText_tester" />
+
+        <TextView
+            android:id="@+id/textView_Device1"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/Device1"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/BTCheck"
+            app:layout_constraintTop_toBottomOf="@+id/EditText_tester" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi_Device1"
+            style="@style/AVLoadingIndicatorView.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:visibility="invisible"
+            app:indicatorColor="@color/colorAccent"
+            app:indicatorName="BallClipRotatePulseIndicator"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_Device1"
+            app:layout_constraintEnd_toEndOf="@+id/textView_Device1"
+            app:layout_constraintTop_toTopOf="@+id/textView_Device1"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView_Device2"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/Device2"
+            android:textSize="18dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toEndOf="@+id/textView_Device1"
+            app:layout_constraintTop_toBottomOf="@+id/EditText_tester" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi_Device2"
+            style="@style/AVLoadingIndicatorView.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:visibility="invisible"
+            app:indicatorColor="@color/colorAccent"
+            app:indicatorName="BallClipRotatePulseIndicator"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_Device2"
+            app:layout_constraintEnd_toEndOf="@+id/textView_Device2"
+            app:layout_constraintTop_toTopOf="@+id/textView_Device2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/ServiceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:onClick="Service"
+            android:text="@string/button_showsensordata"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BTCheck" />
+
+        <TextView
+            android:id="@+id/textView_Ramp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/TextDownRamp"
+            android:textSize="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/ServiceButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ServiceButton" />
+
+        <TextView
+            android:id="@+id/textView_CountTimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="0"
+            android:textSize="24dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/ServiceButton"
+            app:layout_constraintStart_toEndOf="@+id/ServiceButton"
+            app:layout_constraintTop_toTopOf="@+id/ServiceButton"
+            app:layout_constraintVertical_bias="0.538" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/title_home"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/StepShow"
+            android:layout_width="match_parent"
+            android:layout_height="164dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/StepState"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ServiceButton"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MainLayout"
+        app:menu="@menu/navigation" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+</android.support.constraint.ConstraintLayout>

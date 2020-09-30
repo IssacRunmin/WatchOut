@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="samplingRates">
+        <item>Fastest</item>
+        <item>Game</item>
+        <item>UI</item>
+        <item>Normal</item>
+    </string-array>
+    <string-array name="Testers">
+        <item>Select</item>
+        <item>Zhang T.G.</item>
+        <item>Li J.W.</item>
+        <item>Wu Z.Y.</item>
+        <item>Ou R.M.</item>
+        <item>Xu J.C.</item>
+        <item>Else: name below</item>
+    </string-array>
+</resources>
