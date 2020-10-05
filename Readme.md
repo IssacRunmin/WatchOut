@@ -29,7 +29,7 @@ The file 'Matlab/AndroidStepEvaluate201806071108_Orm201807291429.m' is the main 
 
 ### main2: LookUp_Evaluation
 
-The file 'Matlab/LookUp_Evaluation_Orm20180727.m' is the main code for processing **foot mounted** data the user collected in Actual street. It read the file in the same directory as **main1** and process it and the algorithm refers to [***LookUp***][1]. The variable *EntranceDis* store the result of it. It's subsidiary files are: 
+The file 'Matlab/LookUp_Evaluation_Orm20180727.m' is the main code for processing **foot mounted** data the user collected in Actual street. It read the file in the same directory as **main1** and process it and the algorithm refers to LookUp ([Lookup: Enabling Pedestrian Safety Services via Shoe Sensing⬀](https://dl.acm.org/doi/abs/10.1145/2742647.2742669)). The variable *EntranceDis* store the result of it. It's subsidiary files are: 
 
 - GenerateGroundTruth_Orm201807272112.m
 - IMU.m
@@ -41,8 +41,6 @@ In the folder 'Matlab/Train', three files 'WatchOut_Train_{ClassifierType}.m' ar
 ### 4: Others
 
 Files in 'Matlab/Figures' draw the figures according to the results. Most are depended on 'EvaluateWatchOut.m' in the same folder. The remaining '\*.mat' files are the result of data files. File 'Matlab/Other/SVMParameter_MATLAB_TO_DAT.m' transfer classifier parameters (not only SVM) to a text file which is used to predict in the APP. 
-
-[1] https://www.maozhitang.net/wp-content/uploads/2018/10/paper2.pdf
 
 ------
 
