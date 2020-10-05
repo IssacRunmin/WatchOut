@@ -1,12 +1,14 @@
-# WatchOut Readme
+# WatchOut
 
 WatchOut, an Android application to detect terrain change using pedestrian behaviors (Go up/down ramp, step off/on, walk on flat, turn) prediction. Paper [WATCHOUT: A Practical Secure Pedestrian Warning System based on Smartphones](https://ieeexplore.ieee.org/abstract/document/9014250) is publish in [Globecom 2019](https://globecom2019.ieee-globecom.org/) 
 
-------
-
-[TOC]
-
-------
+* [Matlab Code](#matlab-code)
+   * [main1: AndroidStepEvaluation](#main1-androidstepevaluation)
+   * [main2: LookUp_Evaluation](#main2-lookup_evaluation)
+   * [main3: Training for WatchOut {#Train}](#main3-training-for-watchout-train)
+   * [4: Others](#4-others)
+* [Android Code](#android-code)
+* [Arduino Code](#arduino-code)
 
 ## Matlab Code
 
