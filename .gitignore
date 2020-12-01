@@ -1,6 +1,5 @@
-.gitignore
-
 # MacOS
+.DS_Store
 **/.DS_Store
 
 # Built application files

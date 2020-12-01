@@ -1,6 +1,6 @@
 # WatchOut
 
-WatchOut, an Android application to detect terrain change using pedestrian behaviors (Go up/down ramp, step off/on, walk on flat, turn) prediction. Paper [WATCHOUT: A Practical Secure Pedestrian Warning System based on Smartphones](https://ieeexplore.ieee.org/abstract/document/9014250) is publish in [Globecom 2019](https://globecom2019.ieee-globecom.org/) 
+WatchOut, an Android application to detect terrain change using pedestrian behaviors (Go up/down a ramp, step off/on, walk on flat, turn) prediction. Paper [WATCHOUT: A Practical Secure Pedestrian Warning System based on Smartphones](https://ieeexplore.ieee.org/abstract/document/9014250) is published in [Globecom 2019](https://globecom2019.ieee-globecom.org/) 
 
 * [Matlab Code](#matlab-code)
    * [main1: AndroidStepEvaluation](#main1-androidstepevaluation)
@@ -22,14 +22,14 @@ The structure of the code is:
 
 ### main1: AndroidStepEvaluation
 
-The file 'Matlab/AndroidStepEvaluate201806071108_Orm201807291429.m' is the main code of detection, which reads the text file in 'Matlab/MobilePhoneSensor/{PhoneType}/{User}' directory that the user collected in Actual street. It needs classifier generated in [**Train**](#Train) and saves the result in *ResultPath*. It's subsidiary files are:
+The file 'Matlab/AndroidStepEvaluate201806071108_Orm201807291429.m' is the main code of detection, which reads the text file in 'Matlab/MobilePhoneSensor/{PhoneType}/{User}' directory that the user collected in Actual street. It needs a classifier generated in [**Train**](#Train) and saves the result in *ResultPath*. It's subsidiary files are:
 
 - GenerateGroundTruth_Orm201807272112.m
 - getEntropy.m
 
 ### main2: LookUp_Evaluation
 
-The file 'Matlab/LookUp_Evaluation_Orm20180727.m' is the main code for processing **foot mounted** data the user collected in Actual street. It read the file in the same directory as **main1** and process it and the algorithm refers to LookUp ([Lookup: Enabling Pedestrian Safety Services via Shoe Sensing⬀](https://dl.acm.org/doi/abs/10.1145/2742647.2742669)). The variable *EntranceDis* store the result of it. It's subsidiary files are: 
+The file 'Matlab/LookUp_Evaluation_Orm20180727.m' is the main code for processing **foot mounted** data the user collected in the actual street. It read the file in the same directory as **main1** and processes it and the algorithm refers to LookUp ([Lookup: Enabling Pedestrian Safety Services via Shoe Sensing⬀](https://dl.acm.org/doi/abs/10.1145/2742647.2742669)). The variable *EntranceDis* store the result of it. It's subsidiary files are: 
 
 - GenerateGroundTruth_Orm201807272112.m
 - IMU.m
@@ -40,7 +40,7 @@ In the folder 'Matlab/Train', three files 'WatchOut_Train_{ClassifierType}.m' ar
 
 ### 4: Others
 
-Files in 'Matlab/Figures' draw the figures according to the results. Most are depended on 'EvaluateWatchOut.m' in the same folder. The remaining '\*.mat' files are the result of data files. File 'Matlab/Other/SVMParameter_MATLAB_TO_DAT.m' transfer classifier parameters (not only SVM) to a text file which is used to predict in the APP. 
+Files in 'Matlab/Figures' draw the figures according to the results. Most depend on 'EvaluateWatchOut.m' in the same folder. The remaining '\*.mat' files are the result of data files. File 'Matlab/Other/SVMParameter_MATLAB_TO_DAT.m' transfer classifier parameters (not only SVM) to a text file which is used to predict in the APP. 
 
 ------
 
